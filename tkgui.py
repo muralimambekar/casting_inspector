@@ -5,12 +5,10 @@ Created on Mon Jul 13 10:31:19 2020
 
 @author: murali
 """
-#from predict import casting
 from tkinter import *
 from keras.preprocessing import image
 import numpy as np
 from keras.models import load_model
- 
 # loading Python Imaging Library 
 from PIL import ImageTk, Image   
 # To get the dialog box to open when required  
@@ -47,9 +45,8 @@ def prediction():
     test_image = np.expand_dims(test_image, axis = 0)
     result = model.predict(test_image)
     
-
     if result[0][0] == 1:
-        prediction = 'CASTING IS OK        '
+        prediction = 'CASTING IS OK         '
         
     else:
         prediction = 'CASTING IS DEFECTIVE'
@@ -58,15 +55,15 @@ def prediction():
     # set the image as img  
     result.place(bordermode=OUTSIDE, x=400, y=120)
 
-# Create a windoe 
+# Create a window 
 root = Tk()   
 # Set Title as Image Loader 
 root.title("CASTING INSPECTOR")   
 # Set the resolution of window 
 root.geometry("700x450")   
-# Allow Window to be resizable 
+# Do't Allow Window to be resizable 
 root.resizable(width = False, height = False)   
-# Create a button and place it into the window using grid layout 
+# Create a button and place it into the window using place layout 
 btn_open_image = Button(root, text ='Open image', command = open_img).place( 
                                         x = 10, y= 400) 
 btn_predict = Button(root, text ='Predict', command = prediction).place( 
