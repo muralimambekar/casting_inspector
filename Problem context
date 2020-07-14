@@ -1,0 +1,35 @@
+Context
+This dataset is of casting manufacturing product.
+Casting is a manufacturing process in which a liquid material is usually poured into a mold, which contains a hollow cavity of the desired shape, and then allowed to solidify.
+Reason for collect this data is casting defects!!
+casting defect is an undesired irregularity in a metal casting process.
+There are many types of defect in casting like blow hole, pin hole, burr,shrinkage defects, mold material defects, pouring metal defects, metallurgical defects, etc.
+Defects are unwanted thing in casting industry.For removing this defective product all industry have their quality inspection department. But main problem is this inspection process is carried out manually. It is very time consuming process and due to human accuracy this is not 100% accurate.This can be cause of rejection of whole order. So it create big loss in company.
+
+We decided to make inspection process automatic and for this we need to make deep learning classification model for this problem.
+
+contain
+These all photos are top view of submersible pump impeller(google search for better understanding).
+The dataset contains total 7348 image data.These all are size of (300*300) pixels gray scaled images. In all This images augmentation already applied.
+
+Also uploaded images size of 512x512 gray scale. This data set is without Augmentation. This contatins 519 okfront and 781 deffront impeller images.
+For capturing this images, their requirement of stable lighting, for this we made special arrangement.
+
+there are main two categories:-
+1) Defective
+2)Ok
+
+making classification model we already split data for training and testing in two folders.
+Both train and test folder contains deffront and okfront sub folders.
+
+train :- deffront have 3758 and okfront have 2875 images
+test :- deffront have 453 and okfront have 262 images
+
+Acknowledgements
+We wouldn't be here without the help of PILOT TECHNOCAST, Shapar, Rajkot. we have to thank them for constant support and allowing us to work for this problem.
+
+Prototype
+We also made Working prototype using this dataset. Click here
+
+task
+you have to write an algorithm to classify whether images contain either a defective or a ok product. This is easy for humans to identify but for computer will find it a bit more difficult.
